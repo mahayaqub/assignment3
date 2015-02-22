@@ -1,0 +1,59 @@
+Ipython
+
+1.
+import inspect
+
+inspect.getsourcefile(os.path.abspath)
+Out[52]: '/usr/lib/python2.7/posixpath.py'
+
+Hence, the os.path.abspath function is defined in the file posixpath.py
+
+2.
+Command used to count number of files in the /etc directory:
+find /etc -maxdepth 1 -type f | wc -l
+
+This value was assigned to num in the following way:
+values = !find /etc -maxdepth 1 -type f | wc -l
+num = float(values[0])
+
+3.
+import math
+In [34]: math.sqrt(num)
+Out[34]: 10.0
+
+4.
+x = 12345
+
+x**2
+Out[36]: 152399025
+
+x*x
+Out[37]: 152399025
+
+import numpy
+
+numpy.square(x)
+Out[40]: 152399025
+
+%timeit x*x
+10000000 loops, best of 3: 61 ns per loop
+
+%timeit x**2
+10000000 loops, best of 3: 66.1 ns per loop
+
+%timeit numpy.square(x)
+1000000 loops, best of 3: 1.16 µs per loop
+
+Hence the x*x is the fastest method.
+
+5.
+There are 25 cell magic commands. They are the following:
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile 
+
+PyDev
+
+5.
+The following were the contents of the console view after the program completed:
+
+Hello World!
